@@ -1,5 +1,5 @@
 import { Body, ConflictException, Controller, Post } from "@nestjs/common";
-import { PrismaService } from "../prisma/prisma.service";
+import { PrismaService } from "../prisma/prisma.service.js";
 
 @Controller("/auth")
 export class CreateAccountController {
