@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_USERNAME=nestjs_user
+      - POSTGRESQL_PASSWORD=nestjs_password
+      - POSTGRESQL_DATABASE=nestjs_db
+    volumes:
+      - postgres_data:/bitnami/postgresql
+
+volumes:
+  postgres_data:
