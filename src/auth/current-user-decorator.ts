@@ -1,5 +1,5 @@
 import { createParamDecorator } from "@nestjs/common";
-import { UserPayloadSchema } from "./jwt.strategy.js";
+import { UserPayloadSchema } from "@/auth/jwt.strategy.js";
 
 export const CurrentUser = createParamDecorator((_, context) => {
   const request = context.switchToHttp().getRequest();
